@@ -1,0 +1,480 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {margin: 0; padding: 0;}
+
+li {list-style: none;}
+
+a {text-decoration: none; color: inherit;}
+
+
+
+/* outline */
+/* header, .container, .footer, .slider, ul, li, div, p, a {outline: 1px dotted red;} */
+
+
+.wrap {font-family: -apple-system, 'Roboto', 'NotoSans', AppleSDGothicNeo, Malgun Gothic, 맑은 고딕, 돋움, dotum, sans-serif}
+
+
+/* 로고 영역 */
+.title_wrap {
+}
+
+.title_wrap > h1 {
+  display: block;
+  margin: 100px auto 0 auto;
+  padding-bottom: 40px;
+  width: 88px;
+  height: 27px;
+  background-size: 100px 80px;
+  background-color: #fff;
+  background-image: url(../img/logo_kakao.png);
+  background-repeat: no-repeat;
+}
+
+.title_wrap > h1 > span {
+  display: block;
+  width: 88px;
+  height: 27px;
+  position: relative;
+  z-index: -1;
+  font-size: 19px;
+}
+
+/* 아이디, 비밀번호 박스 영역 */
+.content_wrap {
+  width: 580px;
+  height: 493px;
+  margin: 0 auto 42px;
+  padding: 0 69px;
+  border: 1px solid rgba(0,0,0,.12);
+  box-sizing: border-box;
+}
+
+.content_login {
+  width: 440px;
+  height: 385px;
+  padding: 55px 0 50px;
+  margin: 0 auto;
+}
+
+/* 아이디 입력 영역 */
+input::placeholder {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: normal;
+  font-family: Roboto, 'NotoSans', sans-serif;
+  color: rgba(0,0,0,.4);
+}
+
+
+.content_login .input_id {
+  width: 100%;
+  border: solid #ccc;
+  border-width: 0 0 2px;
+}
+
+.content_login .input_id #loginId {
+  width: 100%;
+  height: 45px;
+  padding: 18px 0 8px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Roboto', 'NotoSans';
+  border: 0;
+  outline: 0 none;
+  color: /* rgba(0,0,0,.12); */ #191919;
+  box-sizing: border-box;
+}
+
+/* 비밀번호 입력 영역 */
+.content_login .input_password {
+  width: 100%;
+  border: solid #ccc;
+  border-width: 0 0 2px;
+}
+
+.content_login .input_password #loginPassword {
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  padding: 18px 0 8px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Roboto', 'NotoSans';
+  border: 0;
+  outline: 0 none;
+  color: /* rgba(0,0,0,.12); */ #191919;
+  box-sizing: border-box;
+}
+
+/* 간편로그인 박스 영역 */
+.save_info {
+  width: 440px;
+  height: 20px;
+  margin-top: 25px;
+  font-family: 'NotoSans';
+  color: rgba(0,0,0,.8);
+}
+
+/* input 영역 */
+.save_info #save_info_checkbox {
+  /* display: none; */
+}
+
+/* 간편로그인 텍스트 영역 */
+.save_info_text {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0,0,0,.7);
+  user-select: none;
+}
+
+.btn_login_wrap {
+  width: 100%;
+  height: 188px;
+  padding-top: 40px;
+}
+
+/* 버튼 공통 */
+.button {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Roboto', 'NotoSans', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 52px;
+  color: #505050;
+}
+
+/* 로그인 버튼 */
+.btn_submit {
+  background-color: #fee500;
+}
+.btn_submit:hover {
+  background-color: #fada0a;
+}
+
+/* '또는' 영역 */
+.both_side_line::before {
+  content: "";
+  flex-grow: 1;
+  background-color: #e6e6e6;
+  height: 0.5px;
+  font-size: 0px;
+  line-height: 0;
+}
+
+.both_side_line {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  font-size: 12px;
+  margin: 0 5px;
+  color: #676767;
+  padding: 15px 0;
+}
+
+.both_side_line::after {
+  content: "";
+  flex-grow: 1;
+  background-color: #e6e6e6;
+  height: 0.5px;
+  font-size: 0;
+  line-height: 0;
+}
+
+
+
+/* QR 코드로 로그인 영역 */
+.btn_QR {
+  background-color: #f0f0f0;
+}
+.btn_QR:hover {
+  background-color: #ebebeb;
+}
+
+/* 회원가입, 계정찾기, 비밀번호 찾기 */
+.content_login .info_user {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #505050;
+  font-family: 'NotoSans';
+  font-weight: 600;
+}
+
+.content_login .info_user > ul {
+  display: flex;
+}
+
+.content_login .info_user > ul > li {
+}
+
+.content_login .info_user > ul > li:nth-child(2)::before {
+  content: "|";
+  font-size: 10px;
+  padding: 0 10px;
+  color: #cbcbcb;
+}
+
+
+/* footer 영역 */
+.footer {
+  width: 100%;
+  height: 42px;
+  padding-bottom: 50px;
+}
+
+.footer .service_info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer .service_info > a {
+  font-size: 12px;
+  font-family: 'Roboto', 'NotoSans';
+  color: #4c4c4c;
+}
+
+.footer .txt_copyright_wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  font-size: 11px;
+  font-family: 'Roboto', 'NotoSans';
+  color: rgba(0,0,0,.5);
+}
+
+
+/* 적응형 영역 */
+/* 적응형 영역 */
+@media screen and (max-width: 767px) {  
+  .title_wrap > h1 {
+    display: block;
+    margin: 50px auto 0 auto;
+    padding-bottom: 0;
+    width: 88px;
+    height: 27px;
+    background-size: 100px 80px;
+    background-color: #fff;
+    background-image: url(../img/logo_kakao.png);
+    background-repeat: no-repeat;
+  }
+
+  .title_wrap > h1 > span {
+    display: block;
+    width: 88px;
+    height: 27px;
+    position: relative;
+    z-index: -1;
+    font-size: 19px;
+  }
+  
+  /* 아이디, 비밀번호 박스 영역 */
+  .content_wrap {
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  .content_login {
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    padding: 55px 0 50px;
+    margin: 0 auto;
+  }
+  
+  /* 아이디 입력 영역 */
+  input::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: normal;
+    font-family: Roboto, 'NotoSans', sans-serif;
+    color: rgba(0,0,0,.4);
+    }
+
+  .content_login .input_id {
+    width: 100%;
+    border: solid #ccc;
+    border-width: 0 0 1px;
+  }
+  
+  .content_login .input_id #loginId {
+    width: 100%;
+    height: 45px;
+    padding: 10px 0 8px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto', 'NotoSans';
+    border: 0;
+    outline: 0 none;
+    color: /* rgba(0,0,0,.12); */ #191919;
+    box-sizing: border-box;
+  }
+  
+  /* 비밀번호 입력 영역 */
+  .content_login .input_password {
+    width: 100%;
+    border: solid #ccc;
+    border-width: 0 0 1px;
+  }
+  
+  .content_login .input_password #loginPassword {
+    width: 100%;
+    height: 45px;
+    padding: 20px 0 8px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto', 'NotoSans';
+    border: 0;
+    outline: 0 none;
+    color: /* rgba(0,0,0,.12); */ #191919;
+    box-sizing: border-box;
+  }
+  
+  /* 간편로그인 박스 영역 */
+  .save_info {
+    width: 440px;
+    height: 20px;
+    margin-top: 25px;
+    font-family: 'NotoSans';
+    color: rgba(0,0,0,.8);
+  }
+  
+  /* input 영역 */
+  .save_info #save_info_checkbox {
+    /* display: none; */
+  }
+  
+  
+  .btn_login_wrap {
+    width: 100%;
+    height: 188px;
+    padding-top: 40px;
+  }
+  
+  /* 버튼 공통 */
+  .button {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Roboto', 'NotoSans', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 52px;
+    color: #505050;
+  }
+    
+  /* 로그인 버튼 */
+  .btn_submit {
+    background-color: #fee500;
+  }
+  .btn_submit:hover {
+    background-color: #fada0a;
+  }
+  
+  /* '또는' 영역 */
+  .both_side_line::before {
+    content: "";
+    flex-grow: 1;
+    background-color: #e6e6e6;
+    height: 0.5px;
+    font-size: 0px;
+    line-height: 0;
+  }
+  
+  .both_side_line {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    font-size: 12px;
+    margin: 0 5px;
+    color: #676767;
+    padding: 15px 0;
+  }
+  
+  .both_side_line::after {
+    content: "";
+    flex-grow: 1;
+    background-color: #e6e6e6;
+    height: 0.5px;
+    font-size: 0;
+    line-height: 0;
+  }
+  
+  
+  
+  /* QR 코드로 로그인 영역 */
+  .btn_QR {
+    background-color: #f0f0f0;
+  }
+  .btn_QR:hover {
+    background-color: #ebebeb;
+  }
+  
+ 
+  .content_login .info_user > ul {
+    display: flex;
+  }
+  
+  .content_login .info_user > ul > li {
+  }
+  
+  .content_login .info_user > ul > li:nth-child(2)::before {
+    content: "|";
+    font-size: 10px;
+    padding: 0 10px;
+    color: #cbcbcb;
+  }
+  
+  
+  /* footer 영역 */
+  .footer {
+    width: 100%;
+    min-width: 376px;
+    height: 42px;
+    padding-bottom: 0;
+  }
+  
+  .footer .service_info {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .footer .service_info > a {
+    font-size: 12px;
+    font-family: 'Roboto', 'NotoSans';
+    color: #4c4c4c;
+  }
+  
+  .footer .txt_copyright_wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+    font-size: 11px;
+    font-family: 'Roboto', 'NotoSans';
+    color: rgba(0,0,0,.5);
+  }
+  
+
+}
